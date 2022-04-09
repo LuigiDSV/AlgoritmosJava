@@ -1,0 +1,48 @@
+public static void main(String[] args) {
+    Scanner r = new Scanner (System.in);
+    int l1, l2, l3, s;
+        System.out.println("---------------------===TRIANGLES===---------------------");
+        System.out.println("Para criar o triangulo voce precisara inserir 3 dados...");
+        System.out.println("O valor do primeiro lado: ");
+        l1 = r.nextInt();
+        System.out.println("O valor do segundo lado: ");
+        l2 = r.nextInt();
+        System.out.println("O valor do terceiro lado: ");
+        l3 = r.nextInt();
+        if (l1<=0) {
+            System.out.println("Valor invalido. Nao e possivel criar um tringulo.");
+        }//if 
+        else if (l2<=0){
+            System.out.println("Valor invalido. Nao e possivel criar um tringulo.");
+        }//elseif
+        else if (l3<=0){
+            System.out.println("Valor invalido. Nao e possivel criar um tringulo.");
+        }//elseif2
+        else if ((l1+l2)<=l3){
+            System.out.println("Valor invalido. Nao e possivel criar um tringulo.");
+        }//elseif3
+        else if ((l1+l3)<=l2){
+            System.out.println("Valor invalido. Nao e possivel criar um tringulo.");
+        }//elseif4
+        else if ((l3+l2)<=l1){
+            System.out.println("Valor invalido. Nao e possivel criar um tringulo.");
+        }//elsei5
+        else {
+            if ((l1==l2)&&(l2==l3)) {
+                System.out.println("Seu triangulo e equilatero.");
+            }
+            else if ((l1==l2)||(l2==l3)||(l1==l3)) {
+                System.out.println("Seu triangulo e isosceles.");
+            }
+            else 
+            System.out.println("Seu triangulo e escaleno.");
+        }
+    }//main
+}//class
+//Criar um algoritmo que determina o tipo de triângulo(equilátero(3 lados iguais)
+//,isóceles(2 lados iguais),escaleno(3 lados diferentes))
+//
+//-> O usuário deve inserir os lados de um triângulo
+//
+//-> O sistema deve verificar se os dados inseridos criam um triângulo. Se criar 
+//indicar qual tipo de triângulo se formou.

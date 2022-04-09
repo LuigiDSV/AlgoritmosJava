@@ -1,0 +1,49 @@
+public static void main(String[] args) {
+        Scanner r = new Scanner(System.in);
+        int nimp = 0, esc, ndig, s=0, maiv=0,menv=0, med=1000000000, rec=1;
+        System.out.println("Voce gostaria de inserir numeros magicos(1-sim|2-nao|3-resultados)? ");
+        esc = r.nextInt();
+ 
+        while (esc==1){
+                    System.out.println("Digite o numero: ");
+                    ndig = r.nextInt();
+                    nimp++;
+                    s = s + ndig;
+                        maiv = ndig;
+                        menv = ndig;
+                    if (maiv<ndig){ //if maiorValor for menor que numeroDigitado
+                    maiv = ndig;
+                    }
+                    
+                    if (menv>ndig){ //if menorValor for maior que numeroDigitado
+                    menv = ndig;
+                    }
+                    med = s / nimp;
+                    System.out.println("Voce gostaria de inserir numeros magicos(1-sim|2-nao|3-resultados)? ");
+                    esc = r.nextInt();
+                    if (esc==3){
+                        System.out.println("QUANTIDADE DE NUMEROS INSERIDOS: "+nimp);
+                        System.out.println("SOMA DE TODOS OS NUMEROS INSERIDOS: "+s);
+                        System.out.println("O MAIOR VALOR DENTRE OS NUMEROS INSERIDOS: "+maiv);
+                        System.out.println("O MENOR VALOR DENTRE OS NUMEROS INSERIDOS: "+menv);
+                        System.out.println("A MEDIA DE TODOS OS NUMEROS INSERIDOS: "+med);
+                    }//if       
+        }//while
+        if (esc==2) System.out.println("Ok. Obrigado.");
+    }//main
+}//class
+//Criar um algoritmo que recebe uma quantidade não determinada de números.
+//
+//-> Após inserir o nº, o sistema deve perguntar se deve para ou não.
+//
+//-> Quando for escolhido "PARAR O SISTEMA", deve ser mostrado:
+//
+// + Quantidade de nº inseridos
+//
+// + Soma desses nº
+//
+// + O maior valor de nº inserido
+//
+// + O menor valor de nº inserido
+//
+// + A média dos valores

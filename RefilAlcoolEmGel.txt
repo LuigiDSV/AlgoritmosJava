@@ -1,0 +1,37 @@
+public static void main(String[] args) {
+        Scanner r = new Scanner (System.in);
+    String ref="a", count="b",tmp="c";
+    double nvlalc=0, qnpss, qnptot=0;;
+    System.out.println("+++++ VERIFICACAO DO REFIL +++++");
+    do {
+        System.out.println("Quantas pessoas entraram nesses 30 minutos passados? ");
+        qnpss = r.nextInt();
+        qnptot = qnpss + qnptot;
+        nvlalc = (qnpss*0.2)+nvlalc;
+    if (qnptot==500) {
+        System.out.println("*VAZIO/EMPTY*");
+        System.out.println("Por favor, troque o refil do pedestal.");
+        System.out.println("O refil ja foi trocado? ");
+        ref = r.next();
+        if (ref.equals("sim")){
+                System.out.println("Ok. Refil trocado, capacidade: 100%");
+        }//if3
+        while (ref.equals("nao")) {
+            System.out.println("O refil ja foi trocado? ");
+            ref = r.next();
+            if (ref.equals("sim")){
+                System.out.println("Ok. Refil trocado, capacidade: 100%");
+            }//if2
+        }//while
+        System.exit(0);
+    }//if
+    else System.out.println("Foram usados "+nvlalc+"% de sua capacidade do pedestal.\n"+nvlalc+"% of the maximum capacity of the pedestal was used.");
+    System.out.println("Ja se passaram 30 minutos? ");
+    tmp = r.next();
+    if ((tmp.equals("sim"))&&(qnptot<500)){
+    count = "sim";
+    }
+    }//dowhile
+    while (count.equals("sim"));
+    }//main
+}//class

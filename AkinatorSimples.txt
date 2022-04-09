@@ -1,0 +1,57 @@
+public static void main(String[] args) {
+        System.out.println("-  -  - AKINATOR GAMES -  -  -");
+        System.out.println("ENTRE OS SEGUINTES JOGOS, QUAL VOCE QUER QUE EU DESCUBRA?");
+        System.out.println("THE LAST OF US II | CS:GO | PUBG | ROCKETZ | LOL | GTA V");
+    Scanner read = new Scanner(System.in);
+    String esc="1",esc1="1", esc2="1", esc3="1", esc4="1", esc5="1", esc6="1";
+        System.out.println("O JOGO PENSADO POSSUI UMA HISTORIA PRINCIPAL?");
+        esc = read.nextLine();
+        switch (esc){
+            case "SIM":
+                System.out.println("OK. O JOGO PENSADO TEM UMA GAROTA COMO PERSONAGEM PRINCIPAL? ");
+                    esc2 = read.nextLine();
+                    switch (esc2){
+                        case "SIM":
+                            System.out.println("O JOGO PENSADO E THE LAST OF US 2!");
+                        break;
+                        case "NAO":
+                            System.out.println("O JOGO PENSADO E GTA V!");
+                        break;    
+                        }
+            break;
+            case "NAO":
+                System.out.println("OK. O JOGO PENSADO TEM MODO MULTIJOGADOR? ");
+                esc3 = read.nextLine();
+                switch (esc3){
+                    case "SIM": 
+                        System.out.println("OK. O JOGO PENSADO POSSUI ARMAS DE FOGO? ");
+                        esc4 = read.nextLine();
+                        switch (esc4){
+                            case "SIM":
+                                System.out.println("OK. O JOGO PENSADO TEM APENAS 3 MAPAS? ");
+                                esc5 = read.nextLine();    
+                                switch (esc5){
+                                        case "SIM": 
+                                            System.out.println("O JOGO PENSADO E LOL.");
+                                        break;
+                                        case "NAO":
+                                            System.out.println("OK.O JOGO PENSADO TEM MODO UM GRANDE CENARIO DE ESPORTS? ");
+                                            esc6 = read.nextLine();
+                                        switch (esc6) {
+                                            case "SIM":
+                                                System.out.println("O JOGO PENSADO E CS:GO!");
+                                            break;
+                                            case "NAO":
+                                                System.out.println("O JOGO PENSADO E PUBG!");
+                                            break;    
+                                        }
+                                break;        
+                                }
+                        break;        
+                            case "NAO":
+                                System.out.println("OK. O JOGO PENSADO E ROCKETZ");
+                        }
+                }   
+        } //switch 
+    } //main
+} //publicClass

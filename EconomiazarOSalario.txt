@@ -1,0 +1,29 @@
+    public static void main(String[] args) {
+    Scanner r = new Scanner (System.in);
+    Double sal=0.0, salcd1=0.0, salcd=0.0, des=0.0, destot=0.0;
+    String count="";
+    System.out.println ("------++++++ BEM VINDO AO LIMONEY ++++++------");
+    System.out.println("Para comecarmos, digite o seu salario:\nR$");
+    sal = r.nextDouble(); 
+    do {  
+    System.out.println("Digite agora uma despesa sua:\nR$");
+    des = r.nextDouble();   
+    destot = destot + des;
+    salcd = sal - destot;
+    if (destot>sal) {
+        salcd1 = sal - destot;
+        System.out.println("*ALERTA VERMELHO!* Voce gastou mais do que recebeu\n Peca ajuda a alguem e economize o maximo no proximo mes.\n Seu saldo atual:\nR$"+salcd1);
+    }//elseif
+    else if (sal>destot) {
+        salcd1 = sal - destot;
+        System.out.println("Ok, voce ainda tem saldo de:\nR$"+salcd1);
+    }//elseif1]
+    else if (salcd==0){
+        System.out.println("*ALERTA!* Voce gastou todo o seu salario.\n Guarde qualquer centavo ate o inicio do proximo mes.\n Seu saldo e de R$0,000.00");
+    }//elseif2
+    System.out.println("Voce deseja inserir mais alguma despesa? ");
+    count = r.next();       
+    }//dowhile
+    while (count.equals("sim"));
+    }//main
+}//class

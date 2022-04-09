@@ -1,0 +1,84 @@
+    public static void main(String[] args) {
+    Scanner read = new Scanner (System.in);
+        String ID, IDERR, name, nameERR, cat, catERR, forn, fornERR, date, dateERR, ver="";
+        double preUni, preUniERR;
+        int cdac=0, quant=0, quantERR;
+        System.out.println("--==== BEM VINDO AO FORMULARIOS LULU ====--");
+        while (cdac<7) {
+        System.out.println("Para iniciar, digite o ID do produto: ");
+        ID = read.next();
+        if (ID.length()>=3){
+            System.out.println("Agora, digite o nome do produto: ");
+            name = read.next();
+            cdac++; 
+            if (name.length()>=3){
+                System.out.println("Agora, digite a categoria do produto: ");
+                cat = read.next();
+                cdac++;
+                if (cat.length()>=3) {
+                    System.out.println("Agora, digite o preco unitario deste produto: ");
+                    preUni = read.nextDouble();
+                    cdac++;
+                    if (preUni>0) {
+                        System.out.println("Agora, digite a quantidade desse produto: ");
+                        quant = read.nextInt();
+                        if (quant>0) {
+                            System.out.println("Agora, digite qual e o fornecedor: ");
+                            forn = read.next();
+                            if (forn.length()>=2) {
+                                System.out.println("Agora, digite a data do primeiro cadastro deste produto nesse formato (xx/xx/xxxx:" );
+                                date = read.next();
+                                if (date.length()==10) {
+                                    System.out.println("Ok. todos os dados foram inserido corretamente. O produto foi cadastrado. Obrigado");
+                                    System.out.println("--====VERIFICAR DADOS INSERIDOS====-");
+                                    System.out.println("Voce gostaria de ver se os dados estao corretos? ");
+                                    switch (ver) {
+                                        case "sim": 
+                                            System.out.println("ID DO PRODUTO: "+ID);
+                                            System.out.println("NOME DO PRODUTO: "+name);
+                                            System.out.println("CATEGORIA DO PRODUTO: "+cat);
+                                            System.out.println("PRECO UNITARIO DO PRODUTO: "+preUni);
+                                            System.out.println("QUANTIDADE DO PRODUTO: "+quant);
+                                            System.out.println("FORNECERDOR: "+forn);
+                                            System.out.println("DATA DO PRIMEIRO CADASTRO: "+date);
+                                        break;
+                                        case "nao":
+                                            System.out.println("Ok. Obrigado por usar o nosso sistema.");
+                                        break;
+                                    } //switch
+                                } //if7
+                            } //if6
+                        } //if5
+                    }// if4
+                } //if3
+            } //if2
+         } //if
+          //else    
+        } //while
+    } //main
+//Criar um algoritmo que realiza a validação de campos de um formulário.
+//
+//-> Esse formulário contém os seguintes campos:
+//
+// + ID_produto
+//
+// + nome
+//
+// + categoria
+//
+// + perço unitário
+//
+// + quantidade
+//
+// + fornecedor
+//
+// + data_cadastro
+//
+//
+//
+//-> Vocês devem colocar regras de inserção de dados nos campos citados acima 
+//
+//-> O sistema deve mostrar qual(ais) campo teve um ERRO
+//
+//-> O sistema somente finaliza quando todos os dados de inserção estiverem corretos. 
+} //class
